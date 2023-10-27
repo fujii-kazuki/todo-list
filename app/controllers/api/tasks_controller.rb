@@ -3,16 +3,16 @@ class Api::TasksController < ApplicationController
 
   def index
     @tasks = Task.order('created_at DESC')
-    render json: @tasks
+    render json: { tasks: @tasks }
   end
 
   def create
     @task = Task.new(task_params)
 
     if @task.save
-      render json: @task, status: :created
+      render json: { task: @task }, status: :created
     else
-      render json: @task.errors, status: :unprocessable_entity
+      render json: { taskErrors: @task.errors }, status: :unprocessable_entity
     end
   end
 
