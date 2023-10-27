@@ -3,7 +3,7 @@ class Api::TasksController < ApplicationController
 
   def index
     @tasks = Task.order('created_at DESC')
-    render @tasks
+    render json: @tasks
   end
 
   def create
