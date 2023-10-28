@@ -1,4 +1,4 @@
-#　ToDoリスト（Vue.js + Rails）
+# ToDoリスト（Vue.js + Rails）
 
 エンジニア経験者の方から勧められたVue.jsに興味を持ち、学習目的でToDoリストを作成しました。  
 
